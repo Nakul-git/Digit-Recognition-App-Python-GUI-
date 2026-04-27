@@ -1,47 +1,51 @@
 # 🧠 Digit Recognition App (Python + GUI)
 
-A simple desktop application that uses Machine Learning to recognize handwritten digits from uploaded images.
+A desktop application that uses Machine Learning to recognize digits from uploaded images.
 
-Built with Python, Scikit-learn, and Tkinter, this project demonstrates the complete ML workflow — from training a model to deploying it in a GUI.
+Built with Python, Scikit-learn, Tkinter, Pillow, NumPy, and Joblib.
 
 ---
 
 ## 🚀 Features
 
-- 📂 Upload image (PNG / JPG / JPEG)
+- 📂 Upload images (PNG / JPG / JPEG)
 - 🖼️ Live image preview in GUI
 - 🔍 Automatic digit prediction
-- 🧠 Trained ML model (Neural Network / SVM)
-- 💾 Model saving & loading (joblib)
-- ⚡ No internet required (uses built-in dataset)
+- 🧠 SVM-based machine learning model
+- 💾 Model saving & loading using Joblib
+- 🖨️ Supports simple printed and handwritten-style digits
+- ⚡ No internet required after setup
 
 ---
 
 ## 🛠️ Tech Stack
 
-- Python  
-- Scikit-learn  
-- Tkinter (GUI)  
-- Pillow (Image processing)  
-- Joblib (Model persistence)  
+- Python
+- Scikit-learn
+- Tkinter
+- Pillow
+- NumPy
+- Joblib
 
 ---
 
 ## 📸 How It Works
 
-1. Model is trained using the **Digits dataset** (`sklearn.datasets`)
-2. Uploaded image is:
-   - Converted to grayscale  
-   - Cropped & padded  
-   - Resized to 8×8  
-   - Normalized  
-3. Model predicts the digit  
-4. Result is displayed in GUI  
+The model is trained using Scikit-learn’s built-in digits dataset plus synthetic printed digit images.
+
+Uploaded images are:
+
+- Converted to grayscale
+- Cropped and padded
+- Resized to 28×28 pixels
+- Normalized
+
+Then the trained SVM model predicts the digit and displays the result in the GUI.
 
 ---
 
 ## ▶️ Run the Project
 
 ```bash
-pip install scikit-learn pillow joblib
+pip install scikit-learn pillow joblib numpy
 python main.py
